@@ -22,7 +22,8 @@ BlogPost.init({
 		validate: {
 			notEmpty: true
 		}
-	}
+	},
+	asset: DataTypes.INTEGER
 }, { sequelize, modelName: "blogpost" });
 
 sequelize.sync(sqlite[process.env.NODE_ENV])

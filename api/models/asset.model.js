@@ -6,11 +6,7 @@ class Asset extends Model {};
 
 Asset.init({
 	url: DataTypes.TEXT,
-	name: DataTypes.TEXT,
-	details: DataTypes.JSONB,
-	size: DataTypes.INTEGER,
-	filename: DataTypes.TEXT,
-	contentType: DataTypes.TEXT
+	name: DataTypes.TEXT
 }, { sequelize, modelName: "asset" });
 
 sequelize.sync(config[process.env.NODE_ENV])
