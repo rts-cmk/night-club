@@ -4,8 +4,42 @@ var { sequelize } = require("../config/database");
 class Reservation extends Model {};
 
 Reservation.init({
-	table: DataTypes.INTEGER,
-	date: DataTypes.DATE
+	name: {
+		type: DataTypes.STRING,
+		validate: {
+			notEmpty: true
+		}
+	},
+	email: {
+		type: DataTypes.STRING,
+		validate: {
+			isEmail: true
+		}
+	},
+	table: {
+		type: DataTypes.STRING,
+		validate: {
+			notEmpty: true
+		}
+	},
+	guests: {
+		type: DataTypes.STRING,
+		validate: {
+			notEmpty: true
+		}
+	},
+	date: {
+		type: DataTypes.DATE,
+		validate: {
+			isDate: true
+		}
+	},
+	phone: {
+		type: DataTypes.STRING,
+		validate: {
+			notEmpty: true
+		}
+	}
 }, { sequelize, modelName: "reservation" });
 
 sequelize.sync({ force:true })

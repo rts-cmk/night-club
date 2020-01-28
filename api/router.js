@@ -2,8 +2,10 @@ var router = require("express").Router();
 var { readdir } = require("fs");
 var { join } = require("path");
 var { requestLogger } = require("./config/winston");
+var formidable = require("./config/formidable");
 
 router.use(requestLogger);
+router.use(formidable);
 
 readdir(join(__dirname, "routes"), routesIterator);
 

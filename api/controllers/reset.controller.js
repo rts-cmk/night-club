@@ -28,6 +28,8 @@ async function reset(req, res, next) {
 			eventName: "DJ Socks Spins The Vinyls",
 			eventDescription: "lorem ipsum dolor sit amet",
 			eventDate: new Date(),
+			location: "Small stage",
+			asset: 1
 		});
 	
 		res.send("reset done");

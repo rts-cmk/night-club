@@ -7,7 +7,8 @@ Event.init({
 	eventName: DataTypes.TEXT,
 	eventDescription: DataTypes.TEXT,
 	eventDate: DataTypes.DATE,
-	asset: DataTypes.INTEGER
+	asset: DataTypes.INTEGER,
+	location: DataTypes.STRING
 }, { sequelize, modelName: "event" });
 
 sequelize.sync({ force:true })
