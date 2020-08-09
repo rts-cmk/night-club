@@ -17,8 +17,8 @@ npm start
 ```
 
 ## Reset
-
-Hvis du har brug for at resette data kan du køre følgende route:
+Du skal kører /reset endpointet for at fylde data i.
+Hvis du har brug for at resette data, kan du ligeledes kører /reset endpointet
 ```
 http://localhost:4000/reset
 ```
